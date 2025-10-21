@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { CartItem, Language } from '../types';
+import type { CartItem, Language } from '../types';
 
 interface AppState {
   // Language

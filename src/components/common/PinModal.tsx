@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X } from 'lucide-react';
+
 import { useStore } from '../../lib/store';
 import { translations } from '../../lib/i18n';
 

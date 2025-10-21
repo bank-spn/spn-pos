@@ -1,4 +1,4 @@
-import { Category } from '../../types';
+import type { Category } from '../../types';
 import { useStore } from '../../lib/store';
 
 interface CategoryFilterProps {
@@ -13,7 +13,7 @@ export const CategoryFilter = ({
   onSelectCategory,
 }: CategoryFilterProps) => {
   const { language } = useStore();
-  const t = useStore((state) => state.language);
+
 
   return (
     <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">

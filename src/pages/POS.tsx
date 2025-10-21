@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { useStore } from '../lib/store';
 import { translations } from '../lib/i18n';
-import { Product, Category, ViewMode } from '../types';
+import type { Product, Category, ViewMode } from '../types';
 import { ProductCard } from '../components/pos/ProductCard';
 import { CategoryFilter } from '../components/pos/CategoryFilter';
 import { SearchBar } from '../components/pos/SearchBar';

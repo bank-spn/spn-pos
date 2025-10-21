@@ -1,6 +1,6 @@
 import { Minus, Plus, Trash2, Edit2 } from 'lucide-react';
 import { useState } from 'react';
-import { CartItem as CartItemType } from '../../types';
+import type { CartItem as CartItemType } from '../../types';
 import { useStore } from '../../lib/store';
 
 interface CartItemProps {

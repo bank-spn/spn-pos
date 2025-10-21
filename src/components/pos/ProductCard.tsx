@@ -1,5 +1,5 @@
 import { Plus } from 'lucide-react';
-import { Product } from '../../types';
+import type { Product } from '../../types';
 import { useStore } from '../../lib/store';
 
 interface ProductCardProps {

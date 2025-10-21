@@ -52,7 +52,7 @@ export const useRealtimeInventory = (onInventoryUpdate: () => void) => {
     channel
       .on('broadcast', { event: 'UPDATE' }, (payload) => {
         console.log('Inventory updated:', payload);
-        toast.info('Inventory updated');
+        toast('Inventory updated');
         onInventoryUpdate();
       })
       .subscribe();
