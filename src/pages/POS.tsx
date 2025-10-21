@@ -32,7 +32,7 @@ export const POS = () => {
   const fetchCategories = async () => {
     try {
       const { data, error } = await supabase
-        .from('pos_categories')
+        .from('pos.categories')
         .select('*')
         .order('sort_order');
 
@@ -47,7 +47,7 @@ export const POS = () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
-        .from('erp_inventory_items')
+        .from('erp.inventory_items')
         .select('*')
         .order('name');
 
@@ -92,7 +92,7 @@ export const POS = () => {
 
       // Create order
       const { data: order, error: orderError } = await supabase
-        .from('pos_orders')
+        .from('pos.orders')
         .insert({
           table_number: tableNumber || null,
           subtotal,
@@ -118,14 +118,14 @@ export const POS = () => {
       }));
 
       const { error: itemsError } = await supabase
-        .from('pos_order_items')
+        .from('pos.order_items')
         .insert(orderItems);
 
       if (itemsError) throw itemsError;
 
       // Create payment
       const { error: paymentError } = await supabase
-        .from('pos_payments')
+        .from('pos.payments')
         .insert({
           order_id: order.id,
           payment_method: paymentMethod,
