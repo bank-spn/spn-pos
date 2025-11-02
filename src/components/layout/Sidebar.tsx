@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, ShoppingCart, Wallet, FileText, Moon, Sun, Menu } from 'lucide-react';
+import { LayoutDashboard, ShoppingCart, Wallet, FileText, Package, Moon, Sun, Menu } from 'lucide-react';
 import { useState } from 'react';
 import { useStore } from '../../lib/store';
 import { translations } from '../../lib/i18n';
@@ -12,6 +12,7 @@ export const Sidebar = () => {
   const navItems = [
     { path: '/dashboard', icon: LayoutDashboard, label: t.dashboard },
     { path: '/pos', icon: ShoppingCart, label: t.pos },
+    { path: '/inventory', icon: Package, label: language === 'th' ? 'คลังสินค้า' : 'Inventory' },
     { path: '/cashier', icon: Wallet, label: t.cashier },
     { path: '/audit', icon: FileText, label: t.auditLog },
   ];

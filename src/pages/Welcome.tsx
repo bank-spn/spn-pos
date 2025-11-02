@@ -39,11 +39,14 @@ export const Welcome = () => {
             </div>
           </button>
 
-          {/* ERP Card (Visual Only) */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl opacity-50 cursor-not-allowed">
+          {/* ERP Card */}
+          <button
+            onClick={() => navigate('/inventory')}
+            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+          >
             <div className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-6">
-                <Package className="w-12 h-12 text-gray-400" />
+              <div className="w-24 h-24 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-6">
+                <Package className="w-12 h-12 text-green-600 dark:text-green-400" />
               </div>
               <h2 className="text-2xl font-bold mb-3">
                 {language === 'th' ? 'ระบบจัดการคลังสินค้า' : 'ERP System'}
@@ -53,11 +56,8 @@ export const Welcome = () => {
                   ? 'จัดการสินค้าคงคลังและรายงาน'
                   : 'Manage inventory and reports'}
               </p>
-              <span className="mt-4 text-sm text-gray-500">
-                {language === 'th' ? 'เร็วๆ นี้' : 'Coming Soon'}
-              </span>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>

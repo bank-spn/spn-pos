@@ -7,6 +7,7 @@ import { Dashboard } from './pages/Dashboard';
 import { POS } from './pages/POS';
 import { Cashier } from './pages/Cashier';
 import { AuditLog } from './pages/AuditLog';
+import { Inventory } from './pages/Inventory';
 import { useStore } from './lib/store';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/pos" element={<POS />} />
           <Route path="/cashier" element={<Cashier />} />
           <Route path="/audit" element={<AuditLog />} />
+          <Route path="/inventory" element={<Inventory />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
